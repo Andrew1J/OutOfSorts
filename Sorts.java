@@ -18,7 +18,7 @@ public class Sorts{
         for(int i=0;i<data.length;i++){
             int indmin = i;
             for(int j=i+1;j<data.length;j++){
-                if(data[j]<data[i]){
+                if(data[j]<data[indmin]){
                     indmin = j;
                 }
             }
