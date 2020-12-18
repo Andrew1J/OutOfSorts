@@ -12,12 +12,16 @@ public class Tester{
         Random rng = new Random();
         int[]arr1 = new int[1000];
         int[]arr2 = new int[1000];
+        int[]arr3 = new int[1000];
+        int[]arr4 = new int[1000];
         for(int i=0;i<1000;i++){
-            arr1[i] = arr2[i] = rng.nextInt();
+            arr1[i] = arr2[i] = arr3[i] = arr4[i] = rng.nextInt();
         }
         Sorts.bubbleSort(arr1);
         Arrays.sort(arr2);
-        if(Arrays.equals(arr1,arr2)){
+        Sorts.selectionSort(arr3);
+        Sorts.insertionSort(arr4);
+        if(Arrays.equals(arr1,arr2)&&Arrays.equals(arr1,arr3)&&Arrays.equals(arr1,arr4)){
             System.out.println("It works");
         } else {
             System.out.println("It doesn't work");
